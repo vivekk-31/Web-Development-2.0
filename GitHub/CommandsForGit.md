@@ -6,3 +6,5 @@ This will be done using:
 git add: Adding the files or folders to the staging area. 
 git add "file_name": You can either do this with each individual file. 
 git add . : You can add all the files or folders present in this folder in one go.
+After the files have been added, you use 
+git commit -m "" : To add the message in the double quotes and push the files to GitHub and these files start getting tracked. 
