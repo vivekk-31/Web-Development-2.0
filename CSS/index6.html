@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins;
+    }
+
+    .card {
+        height: 69vh;
+        width: 20vw;
+        border: 1.5px solid grey;
+        border-radius: 12px;
+        padding: 8px;
+        margin: 10px;
+        
+    }
+
+    .card img {
+        width: 285px;
+        border-radius: 12px;
+    }
+
+    .capsule1,
+    .capsule2 {
+        border: 1.5px solid rgb(206, 202, 202);
+        border-radius: 20px;
+        margin: 10px;
+        padding: 4px;
+        text-align: center;
+    }
+
+    .btnContainer{
+        display: flex;
+        align-items: center;
+    }
+    .btn {
+        border: 1.5px solid white;
+        border-radius: 12px;
+        padding: 4px;
+        text-align: center;
+        margin: 5px 88px;
+        color: rgb(64, 64, 230);
+        background-color: rgb(219, 229, 231);
+    }
+</style>
+
+<body>
+    <main>
+        <div class="card">
+            <div class="image"><img src="Blackhole.jpeg" alt="Black Hole Image"></div>
+            <span class="capsule1">Space</span>
+            <span class="capsule2">Nature</span>
+            <h2>Astronomy</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam reprehenderit laboriosam magni dolor
+                ducimus facilis laborum? Et, delectus tempora ratione inventore libero fugiat animi corrupti doloremque
+                saepe quaerat autem? Quasi, asperiores.</p>
+            <div class="btnContainer">
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Fit and Cover</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container {
+            height: 600px;
+            width: 600px;
+            border: 2px solid black;
+            background-color: aliceblue;
+            background-image: url("https://images.pexels.com/photos/13433706/pexels-photo-13433706.jpeg");
+            background-position: 50% 50%;
+        }
+        img{
+            height: 400px;
+            width: 400px;
+            /* This doesn't care about the parent's height and width, it cares about the height and width given to this image. This will cover the image based on the height and width defined in this image maintaing the image's aspect ratio. */
+            /* object-fit: cover; */
+            /* Now, if you want to show the complete image maintaining the image's original aspect ratio, then you would use this, even if there is space in the container.  */
+            /* object-fit: contain; */
+            /* object-fit: cover; */
+            /* object-fit: fill; */
+            /* object-position: bottom right; */
+            /* padding: 10px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <img src="https://images.pexels.com/photos/13433706/pexels-photo-13433706.jpeg" alt=""> -->
+    </div>
+</body>
+
+</html>

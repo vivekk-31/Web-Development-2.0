@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    /* box-sizing: content-box;  */
+    font-family: "Poppins", sans-serif;
+}
+
+.card1{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    margin: 20px;
+    position: relative;
+}
+
+.card1 img{
+    border-radius: 15px;
+    padding-right: 10px;
+}
+
+.card1 p{
+    display: flex;
+    align-items: center;
+}
+
+.duration{
+    display: flex;
+    align-items: center;
+    background-color: rgb(226, 225, 225);
+    width: 50px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+    top: 160px;
+    left: 270px;
+    opacity: 0.8;
+}

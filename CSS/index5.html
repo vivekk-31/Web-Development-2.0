@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position properties</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 80vw;
+            height: 133px;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+        /* By default, these boxes have a static property, by that means we cannot apply z-index or left right top or bottom properties.  */
+        .box1 {
+            position: relative;
+            z-index: 1;
+            background-color: antiquewhite;
+            /* The moment this will be applied, it will be positioned relative to the nearest position ancestor. When we say nearest position element, we mean the element which had the position property set.  */
+            position: absolute;
+            top: 0px;
+        }
+
+        .box2 {
+            background-color: aqua;
+            /* This will make the element move relatively from it's original position. You can use top bottom left right when you set this position  */
+            /* position: relative;
+            top: 34px;
+            left: 30px; */
+
+        }
+
+        .box3 {
+            background-color:rgb(199, 135, 58);
+
+        }
+
+        .box4 {
+            background-color: rgb(98, 98, 154);
+
+        }
+
+        .parent{
+            border: 2px solid black;
+            margin: 30px;
+            padding: 23px;
+            /* position: absolute; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .boxes *{
+            color: brown;
+            border: 2px solid black;
+            margin: 5px;
+        }
+        [data-color="primary"]{
+            background-color: aqua;
+        }
+
+        .boxes:nth-child(odd){
+            background-color: antiquewhite;
+        }
+
+        .boxes::before{
+            content:"Vivek"
+        }
+
+        .boxes::after{
+            content: "Vivek Singh";
+        }
+
+        ::selection{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        .box{
+            border: 2px solid red;
+            /* This will make the element an inline element taking the space which is only required by the content.  */
+            display: inline-block;
+        }
+        .box1{
+            /* This will make the box disappear including the space it has taken.  */
+            /* display: none; */
+            /* This will make the box re-appear including all the styles it had.  */
+            /* display: block; */
+            /* This will make the element disappear but just the element, the space it took is still vacant and will be present there.  */
+            /* visibility: hidden; */
+            border: 2px solid green;
+            margin: 20px;
+            padding: 10px;
+            /* This will set a shadow to the element. A 3D shadow with colors. The syntax is horizontal offset vertical offset blur inset color  */
+            box-shadow: 10px 10px 15px 2px red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>lorem32</p>
+    </div>
+    <div class="box1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quisquam necessitatibus sequi error atque, corporis voluptates dicta. Minus ipsa ea quia nesciunt sit molestias perspiciatis nam. Quibusdam voluptates vitae ut cumque!</p>
+    </div>
+</body>
+</html>

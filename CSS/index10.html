@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            /* This will center the items in the container in the center horizontally.  */
+            justify-content: center;
+            /* This will center the items in the container vertically.  */
+            align-items: center;
+            /* By default the flex-direction is row, from left to right.  */
+            /* flex-direction: column; */
+            /* So, if the main axis is from the left to right, then the cross axis is perpendicular to the main axix. The justify content and align items always works bases on the main axis.  */
+            /* The content will be wrapped in the next line of the container.  */
+            flex-wrap: wrap;
+            /* The items are in one line, then use align items. If the items are more than one line, then use align content.  */
+            /* There is no justify items in flexbox.  */
+            gap: 10px;
+        }
+
+        .item{
+            background-color: aqua;
+            height: 20px;
+            width: 20px;
+            /* margin: 4px; */
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </main>
+</body>
+</html>

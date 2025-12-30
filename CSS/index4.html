@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists and Overflow Properties</title>
+    <style>
+        nav ul li {
+            list-style: none;
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+
+        .box {
+            border: 2px solid black;
+            width: 30vh;
+            height: 30vh;
+            /* It puts the scroll bar only when it is needed or else it doesn't put the scroll bar.  */
+            /* overflow: auto;  */
+            /* Hides all the text which is overflowing.  */
+            /* overflow: hidden;  */
+            /* No matter what, it will put the scroll bar, even if the text is not overflowing.  */
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, ullam harum reiciendis excepturi quo
+            accusamus libero quidem a voluptatem cumque porro! Dolor ipsum fugit repudiandae quos, et eum accusamus
+            officiis nemo sint? Et asperiores culpa debitis blanditiis, cupiditate velit in eos quia ipsum voluptatibus
+            ad officiis unde dolores minima optio, iusto inventore cumque nisi consequuntur, dolore nam exercitationem
+            nihil. Excepturi ullam dicta explicabo eaque. Natus aut quasi rem, quidem ex ipsa dolorem sint porro culpa
+            eveniet, perspiciatis corporis, accusamus voluptas distinctio cumque iusto voluptatem dolor assumenda?
+            Dolorem reiciendis blanditiis, architecto, similique repellendus distinctio, asperiores ea sit ab voluptate
+            enim.
+        </div>
+    </main>
+</body>
+
+</html>

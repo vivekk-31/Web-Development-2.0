@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: rgb(4, 59, 4);
+            height: 80vh;
+            width: 100vw;
+            position: relative;
+        }
+
+        .ball {
+            /* height: 30px;
+            width: 50px;
+            background-color: aquamarine;
+            animation: vivekKaAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite; 
+            animation-delay: 5s; */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: aqua;
+            height: 50px;
+            width: 50px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: vivekKaAnimationX 3s linear infinite, vivekKaAnimationY 2s ease-out infinite alternate;
+        }
+
+        @keyframes vivekKaAnimationX {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes vivekKaAnimationY {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball">
+            Box
+        </div>
+    </div>
+</body>
+
+</html>

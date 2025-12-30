@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A simple HTML Project with details of my music project to practise the semantic tags.">
+    <title>HTML Music Project</title>
+</head>
+
+<body>
+    <h1>MyMusic</h1>
+    <!-- Header of the page -->
+    <header>
+        <!-- The navigation bar -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home </a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#songs">Songs</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero -->
+        <h2>This is my music Journal</h2>
+        <section id="#home">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, et est nulla ullam, omnis laborum sit
+                excepturi perspiciatis voluptas iure, aperiam distinctio vel qui fuga neque quam. Atque ipsam fugiat
+                maxime sit aut minus optio odit dolorem dolore quisquam quis eum, provident exercitationem repellendus!
+                Distinctio atque ipsam dolorem sapiente?</p>
+        </section>
+
+        <section id="about">
+            <h2>What it is all about?</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta esse ut numquam, amet, quae cum
+                dignissimos voluptatum temporibus, rem voluptatem tempora iure. Alias distinctio dicta ipsa molestiae
+                voluptatem accusantium deleniti exercitationem enim doloremque! Commodi quisquam reprehenderit unde ad
+                obcaecati, praesentium velit perferendis possimus repellendus repudiandae, omnis sequi ex quos libero
+                totam ipsum quibusdam incidunt a debitis necessitatibus. Deserunt odio adipisci ut odit exercitationem
+                maiores quis maxime provident at pariatur optio illo voluptates, nisi laudantium expedita et itaque?
+                Sint.</p>
+        </section>
+
+        <section id="songs">
+            <h2>My top songs. The all-time favorite</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt dicta cumque quisquam! Inventore
+                suscipit provident nostrum distinctio nisi sequi molestias libero facere unde quidem cumque quia rerum
+                nemo aperiam, voluptatem similique sint cum! Aspernatur soluta culpa accusamus fugit sunt eveniet cumque
+                nulla similique voluptatum libero illum, itaque id esse quam dignissimos? Amet ipsam, velit, harum
+                veritatis vel tempora culpa blanditiis facere maxime accusantium nulla, quis sunt!</p>
+
+            <h3>The actual songs:</h3>
+            <ol>Tum Se Hi</ol>
+            <ol>Tune Jo Na Kaha</ol>
+            <ol>Aaoge Jab Tum</ol>
+            <ol>Sajda</ol>
+            <ol>Tere Naina</ol>
+
+            <audio controls>
+                <source src="Tum Se Hi-320kbps.mp3" type="audio/mpeg">
+                This audio element is not supported by your browser.
+            </audio>
+
+            <aside>
+                My Favorite Movie:
+                <img width="350"
+                    src="https://ih1.redbubble.net/image.3220597700.8390/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+                    alt="Jab We Met Poster">
+            </aside>
+
+            <h2>Even this song is very nice, but this is a video.</h2>
+            <video width="300" controls>
+                <source src="Rabba_Main_Toh_MarGaya.mp4" type="video/mp4">
+                This video is not supported by your browser.
+            </video>
+
+        </section>
+
+        <section id="artists">
+            <table border="1">
+                <tr>
+                    <th>Artist</th>
+                    <th>Song</th>
+                    <th>Movie</th>
+                </tr>
+                <tr>
+                    <td>Mohit Chauhan</td>
+                    <td>Tum Se Hi</td>
+                    <td>Jab We Met</td>
+                </tr>
+                <tr>
+                    <td>KK</td>
+                    <td>Beetein Lamhein</td>
+                    <td>Metro</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Please Contact Me</h2>
+            <form action="submit">
+                <label for="name">Name </label>
+                <input type="text" id="name" placeholder="Please Enter Your Name">
+
+                <label for="phone">Phone Number </label>
+                <input type="tel" id="phone" placeholder="Please Enter Your Phone Number">
+
+                <label for="email">Email </label>
+                <input type="email" id="email" placeholder="Please Enter your email">
+
+                <input type="radio" id="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female">
+                <label for="female">Female</label>
+
+                <label for="message">Message </label>
+                <input type="text" id="message" placeholder="Please Enter your message">
+                
+                <button>Submit</button>
+            </form>
+        </section>
+        
+
+    </main>
+    <footer>
+        Vivek Singh &copy; All copyrights reserved.
+    </footer>
+</body>
+
+</html>

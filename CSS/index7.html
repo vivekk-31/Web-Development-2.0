@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            /* This is a CSS variable which will is declared globally in the code if it is under the root tag.  */
+            --color:blue;
+            --seccol:rgb(63, 214, 207);
+        }
+
+        nav{
+            background-color: var(--color);
+        }
+
+        ul{
+            display: flex;
+            padding: 10px;
+        }
+
+        ul li{
+            list-style: none;
+        }
+
+        .container{
+            /* You can use the variable with the name in the var() tag. You can also overide the variable to your liking.  */
+            background-color: var(--seccol, red);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, sit, provident, ab architecto dolor sequi laborum iste hic voluptate eaque molestiae ipsam at ipsa nihil! Dolores voluptas, iusto quisquam totam sint maxime debitis dignissimos recusandae alias doloribus eum cum rem nisi minus reprehenderit!</div>
+</body>
+</html>
