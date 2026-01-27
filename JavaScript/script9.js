@@ -1,49 +1,76 @@
 console.log("Business Name Generator: ")
 
 let adjectives = {
-    "adj1":"crazy",
-    "adj2":"amazing",
-    "adj3":"fire"
+    "adj1": "crazy",
+    "adj2": "amazing",
+    "adj3": "fire"
 }
 
 let shopName = {
-    "name1":"engine",
-    "name2":"foods",
-    "name3":"garments"
+    "name1": "engine",
+    "name2": "foods",
+    "name3": "garments"
 }
 
 let anotherWord = {
-    "word1":"bros",
-    "word2":"limited",
-    "word3":"hub"
+    "word1": "bros",
+    "word2": "limited",
+    "word3": "hub"
 }
 
-function randomNum() {
-    let num = Math.random();
-    return num;
-}
+function businessName() {
+    let count, key = 0;
+    for (key in adjectives) {
+        if (adjectives.hasOwnProperty(key))
 
-for (const key in adjectives) {
-    if (!Object.hasOwn(adjectives, key)) continue;
-    const element = adjectives[key];
-    console.log(element)
+        count++;
+        
+    }
+    objectLength = count;
+    console.log(objectLength)
 }
-
-for (const key in shopName) {
-    if (!Object.hasOwn(shopName, key)) continue;
-    const element = shopName[key];
-    console.log(element)
-}
-
-for (const key in anotherWord) {
-    if (!Object.hasOwn(anotherWord, key)) continue;
-    const element = anotherWord[key];
-    console.log(element)
-}
+businessName()
 
 
-let number = randomNum();
-console.log(number)
-if (number) {
-    
-}
+
+// function businessName() {
+//     let first, second, third;
+//     let rand = Math.random();
+//     if (rand<0.33) {
+//         first = "crazy";
+//     }
+//     else if(rand<0.66 && rand>=0.33){
+//         first = "amazing"
+//     }
+//     else{
+//         first = "fire"
+//     }
+
+//     rand = Math.random();
+//     if (rand<0.33) {
+//         second = "engine";
+//     }
+//     else if(rand<0.66 && rand>=0.33){
+//         second = "foods"
+//     }
+//     else{
+//         second = "garments"
+//     }
+
+//     rand = Math.random();
+//     if (rand<0.33) {
+//         third = "bros";
+//     }
+//     else if(rand<0.66 && rand>=0.33){
+//         third = "limited"
+//     }
+//     else{
+//         third = "hub"
+//     }
+
+//     console.log(first + " " +  second + " " + third);
+// }
+
+// businessName()
+
+
