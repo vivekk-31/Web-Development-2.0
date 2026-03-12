@@ -1,7 +1,44 @@
-.desc{
-    position: relative;
-    bottom: 80px;
+*{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.card{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 2px solid black;
+    width: 900px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 10px;
+    padding: 10px;
+}
+
+.image img{
+    border-radius: 5px;
+    /* margin: 2px; */
+    width: 250px;
+}
+
+.image{
+    position: relative;
+}
+
+.text h4, p{
+    padding: 0 10px;
+}
+
+.text h4{
+    margin-bottom: -10px;
+}
+
+.capsule{
+    position: absolute;
+    bottom: 10px;
+    z-index: 10;
+    right: 6px;
+    background: rgb(34, 34, 34);
+    opacity: 0.9;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
 }
