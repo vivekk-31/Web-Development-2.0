@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .container {
+            background-color: rgb(88, 154, 212);
+            margin: 14px;
+            padding: 14px;
+        }
+
+        .child {
+            background-color: aqua;
+            margin: 14px;
+            padding: 14px;
+        }
+
+        .childContainer {
+            background-color: bisque;
+            margin: 14px;
+            padding: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="child">
+            <div class="childContainer">
+                This is a child
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".childContainer").addEventListener("click", (e)=>{
+            e.stopPropagation()
+            console.log(e)
+            alert("childContainer is clicked")
+        })
+        document.querySelector(".child").addEventListener("click", ()=>{
+            e.stopPropagation()
+            alert("child is clicked")
+        })
+        document.querySelector(".container").addEventListener("click", ()=>{
+            alert("container is clicked")
+        })
+        // document.querySelector(".container").addEventListener("click", (e)=>{
+        //     console.log(e.target)
+        // })
+
+        function randomColor() {
+            let val1 = Math.floor(Math.random()*255)+1;
+            console.log(val1);
+            let val2 = Math.floor(Math.random()*255)+1;
+            console.log(val2);
+            let val3 = Math.floor(Math.random()*255)+1;
+            console.log(val3);
+            
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+
+        // setInterval(() => {
+        //     document.querySelector(".childContainer").style.backgroundColor = randomColor()
+        // }, 500);
+
+        setTimeout(() => {
+            document.querySelector(".childContainer").style.backgroundColor = randomColor()
+        }, 3000);
+    </script>
+</body>
+
+</html>
