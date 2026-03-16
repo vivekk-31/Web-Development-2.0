@@ -7,10 +7,32 @@
 
 // console.log("The end.")
 
-function demo() {
-    console.log("Hello")
+// function demo() {
+//     console.log("Hello")
+// }
+
+// let a = demo;
+
+// a();
+
+// function demo(){
+//     console.log("Hello")
+// }
+
+// function functionLoad(func){
+//     func()
+// }
+
+// functionLoad(demo)
+
+function loadScript(src, callback){
+    let script = document.createElement("script")
+    script.src = src;
+    script.onload = () => callback(script)
+    document.head.append(script)
 }
 
-let a = demo;
-
-a();
+loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", (script)=>{
+    alert("script is loaded.")
+    
+})
