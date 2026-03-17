@@ -28,6 +28,17 @@ let prom1 = new Promise((resolve, reject) => {
 
 })
 
+let prom2 = new Promise((resolve, reject) => {
+    let script = document.createElement("script")
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js";
+    script.onload = () => resolve(script)
+
+    script.onerror = () => reject("Script failed to load")
+
+    document.head.append(script) 
+
+})
+
 prom1.then((a) => {
     console.log(a)
 }).catch((err) => {
