@@ -1,0 +1,74 @@
+* {
+    font-family: "Poppins", sans-serif;
+    /* box-sizing: border-box; */
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
+
+ul {
+    padding: 0;
+}
+
+nav {
+    margin: 0px 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+li input {
+    border: 2px solid transparent;
+    outline:none;
+    transition: 0.2s ease; 
+    border-radius: 20px;
+    width: 240px;
+    height: 20px;
+    display: flex;
+    padding: 10px;
+} 
+
+ul li input:hover {
+    border-color:whitesmoke;
+}
+
+ul li input:focus {
+    border-color:whitesmoke;
+}
+
+li input::placeholder {
+    text-align: center;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sections {
+    border: 2px solid red;
+    margin: 5px;
+    height: 75vh;
+}
+
+.playlist {
+    width: 25vw;
+}
+
+.songsDisplay {
+    width: 50vw;
+
+}
+
+.nowPlaying {
+    width: 25vw;
+
+}
