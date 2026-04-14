@@ -55,6 +55,8 @@ main {
 
 .sections {
     border: 2px solid red;
+    border-radius: 20px;
+    padding: 20px;
     margin: 5px;
     height: 75vh;
 }
@@ -65,10 +67,19 @@ main {
 
 .songsDisplay {
     width: 50vw;
-
 }
 
+.card{
+    border: 2px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.coverImage img{
+    height: 200px;
+    width: 200px;
+    border-radius: 20px
+}
 .nowPlaying {
     width: 25vw;
-
 }
