@@ -73,6 +73,7 @@ main {
     border: 2px solid transparent;
     border-radius: 20px;
     cursor: pointer;
+    text-align: center;
 }
 
 .coverImage img{
@@ -83,3 +84,4 @@ main {
 .nowPlaying {
     width: 25vw;
 }
+
