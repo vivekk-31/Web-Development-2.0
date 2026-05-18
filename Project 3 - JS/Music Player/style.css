@@ -67,6 +67,14 @@ main {
 
 .songsDisplay {
     width: 50vw;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(2, 1fr);
+    gap: 10px;
+    overflow: scroll;
+    scrollbar-width: 300px;
+  scrollbar-color: #616161 rgb(17, 17, 17);
+
 }
 
 .card{
