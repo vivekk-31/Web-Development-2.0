@@ -89,7 +89,43 @@ main {
     width: 200px;
     border-radius: 20px
 }
+
 .nowPlaying {
     width: 25vw;
 }
 
+.songControls{
+    height: 10vh;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.controls{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+svg{
+    width: 40px;
+    height: 40px;
+    background-color: wheat;
+}
+
+.seekbar{
+    width: 80%;
+    height: 5px;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}

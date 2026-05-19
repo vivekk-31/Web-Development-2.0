@@ -39,8 +39,6 @@ songs.forEach((currentItem, index) => {
 });
 
 
-
-
 function loadSong(index) {
     audio.src = songs[index].file;
     audio.load()
