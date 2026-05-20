@@ -26,7 +26,8 @@ songs.forEach((currentItem, index) => {
     title.innerText = currentItem.name;
     cards.appendChild(coverImage)
     coverImage.appendChild(img)
-    songTitle.appendChild(cards)
+    songTitle.appendChild(title)
+    cards.appendChild(songTitle)
 
     // let card = document.querySelector(".card")
     cards.addEventListener("click", () => {
@@ -44,6 +45,12 @@ function loadSong(index) {
     audio.load()
 }
 
+
+
 function playSong() {
     audio.play();
+}
+
+function pauseSong(){
+
 }
