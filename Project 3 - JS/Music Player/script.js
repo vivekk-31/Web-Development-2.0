@@ -45,12 +45,31 @@ function loadSong(index) {
     audio.load()
 }
 
+let play = document.querySelector(".play");
+let pause = document.querySelector(".pause")
+play.addEventListener("click", ()=>{
+    if (audio.paused) {
+        playSong()
+        play.style.display = "none"
+        pause.style.display = "block"
+    }
 
+    pause.addEventListener("click", ()=>{
+        if (audio.paused == false) {
+            audio.pause()
+            pause.style.display = "none"
+            play.style.display = "block"
+        }
+    })
+})
 
 function playSong() {
-    audio.play();
+
+    audio.play()
+    
 }
 
 function pauseSong(){
 
+    audio.pause()
 }

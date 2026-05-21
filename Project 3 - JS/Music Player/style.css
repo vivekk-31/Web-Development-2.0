@@ -122,6 +122,14 @@ svg{
     background-color: wheat;
 }
 
+.play{
+    display: block;
+}
+
+.pause{
+    display: none;
+}
+
 .seekbar{
     width: 80%;
     height: 5px;
