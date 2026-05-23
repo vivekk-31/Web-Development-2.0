@@ -126,9 +126,6 @@ svg{
     display: block;
 }
 
-.pause{
-    display: none;
-}
 
 .seekbar{
     width: 80%;
