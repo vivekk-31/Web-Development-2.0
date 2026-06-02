@@ -25,21 +25,21 @@ ul li {
 
 li input {
     border: 2px solid transparent;
-    outline:none;
-    transition: 0.2s ease; 
+    outline: none;
+    transition: 0.2s ease;
     border-radius: 20px;
     width: 240px;
     height: 20px;
     display: flex;
     padding: 10px;
-} 
+}
 
 ul li input:hover {
-    border-color:whitesmoke;
+    border-color: whitesmoke;
 }
 
 ul li input:focus {
-    border-color:whitesmoke;
+    border-color: whitesmoke;
 }
 
 li input::placeholder {
@@ -68,23 +68,23 @@ main {
 .songsDisplay {
     width: 50vw;
     display: grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-template-rows:repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     overflow: scroll;
     scrollbar-width: 300px;
-  scrollbar-color: #616161 rgb(17, 17, 17);
+    scrollbar-color: #616161 rgb(17, 17, 17);
 
 }
 
-.card{
+.card {
     border: 2px solid transparent;
     border-radius: 20px;
     cursor: pointer;
     text-align: center;
 }
 
-.coverImage img{
+.coverImage img {
     height: 200px;
     width: 200px;
     border-radius: 20px
@@ -94,48 +94,51 @@ main {
     width: 25vw;
 }
 
-.songControls{
+.songControls {
     height: 10vh;
     /* background-color: red; */
     position: absolute;
     bottom: 0px;
     width: 100vw;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 10px 0;
 }
 
-.controls{
-    display:flex;
+.controls {
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     cursor: pointer;
 }
 
-svg{
+svg {
     width: 40px;
     height: 40px;
     background-color: wheat;
 }
 
 
-.seekbar{
+.seekbar {
     width: 80%;
     height: 5px;
     background-color: white;
     border-radius: 20px;
     cursor: pointer;
+    position: relative;
 }
 
-.tracker{
-    width: 10px;
-    height: 10px;
+.tracker {
+    /* width: 10px; */
+    height: 5px;
     border-radius: 20px;
-    background-color: white;
-    position:relative;
+    background-color: rgb(145, 140, 140);
+    /* position: relative; */
     bottom: 3px;
+    width: 0%;
+    transition: width 0.2s ease-out;
 }

@@ -88,13 +88,12 @@ next.addEventListener("click", () => {
     nextSong()
 })
 
+let tracker = document.querySelector(".tracker");
 
-let playedRange = audio.played;
-console.log(playedRange);
-let cards = addEventListener("click", ()=>{
-
+let seekbar = audio.addEventListener("timeupdate", ()=>{
+    tracker.style.width = `${(audio.currentTime/audio.duration)*100}%`
+    console.log((audio.currentTime/audio.duration)*100)
 })
-
 
 function playSong() {
     audio.play()
@@ -105,15 +104,29 @@ function pauseSong() {
 }
 
 function previousSong() {
+    if (currentSongIndex === 0) {
+        loadSong(songs.length-1)
+        playSong()
+        currentSongIndex = songs.length - 1;
+    }
+    else{
     currentSongIndex--;
     loadSong(currentSongIndex)
     playSong()
+    }
 }
 
 function nextSong() {
+    if (currentSongIndex === songs.length-1) {
+        loadSong(0)
+        playSong()
+        currentSongIndex = 0;
+    }
+    else{
     currentSongIndex++;
     loadSong(currentSongIndex)
     playSong()
+    }
 }
 
 function trackSong(){
