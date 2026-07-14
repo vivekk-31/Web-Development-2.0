@@ -18,6 +18,19 @@ window.addEventListener('load', () => {
     loadSong(0)
 });
 
+window.addEventListener('keydown', (e) => {
+    if (e.code === 'Space') {
+        e.preventDefault();
+        if (audio.paused) {
+            playSong()
+            playpause.innerHTML = `${pause}`
+        } else {
+            pauseSong()
+            playpause.innerHTML = `${play}`
+        }
+    }
+})
+
 
 var songsDisplay = document.querySelector(".songsDisplay")
 songs.forEach((currentItem, index) => {
@@ -90,13 +103,36 @@ next.addEventListener("click", () => {
 
 let tracker = document.querySelector(".tracker");
 
-let seekbar = audio.addEventListener("timeupdate", ()=>{
-    tracker.style.width = `${(audio.currentTime/audio.duration)*100}%`
-    console.log((audio.currentTime/audio.duration)*100)
+let seekbar = document.querySelector(".seekbar");
+let seekbarWidth = seekbar.clientWidth;
+console.log("Seekbar width: " + seekbarWidth)
+seekbar.addEventListener("click", (e) => {
+    let clickPosition = e.offsetX;
+    console.log('Clicked at width position:', clickPosition);
+    let percentage = clickPosition / seekbarWidth;
+    let seconds = percentage * audio.duration;
+    console.log(seconds);
+    tracker.style.width = `${percentage}%`
+    audio.currentTime = seconds;
+    audio.addEventListener("ended", () => {
+        nextSong();
+    })
 })
+
+let playback = audio.addEventListener("timeupdate", () => {
+    tracker.style.width = `${(audio.currentTime / audio.duration) * 100}%`
+    console.log((audio.currentTime / audio.duration) * 100)
+
+    audio.addEventListener("ended", () => {
+        nextSong();
+    })
+})
+
+
 
 function playSong() {
     audio.play()
+    timeDisplay()
 }
 
 function pauseSong() {
@@ -105,30 +141,51 @@ function pauseSong() {
 
 function previousSong() {
     if (currentSongIndex === 0) {
-        loadSong(songs.length-1)
+        loadSong(songs.length - 1)
         playSong()
         currentSongIndex = songs.length - 1;
     }
-    else{
-    currentSongIndex--;
-    loadSong(currentSongIndex)
-    playSong()
+    else {
+        currentSongIndex--;
+        loadSong(currentSongIndex)
+        playSong()
     }
 }
 
 function nextSong() {
-    if (currentSongIndex === songs.length-1) {
+    if (currentSongIndex === songs.length - 1) {
         loadSong(0)
         playSong()
         currentSongIndex = 0;
     }
-    else{
-    currentSongIndex++;
-    loadSong(currentSongIndex)
-    playSong()
+    else {
+        currentSongIndex++;
+        loadSong(currentSongIndex)
+        playSong()
     }
 }
 
-function trackSong(){
+function timeDisplay() {
+    let currentTime = document.querySelector(".currentTime")
+    audio.addEventListener('timeupdate', () => {
+        console.log("Current Time is: " + `${(audio.currentTime / audio.duration) * 100}`)
+        let min = Math.floor(audio.currentTime / 60)
+        let sec = Math.floor(audio.currentTime % 60)
 
+        const formattedMins = min.toString().padStart(2, 0);
+        const formattedSecs = sec.toString().padStart(2, 0);
+        currentTime.innerHTML = `${formattedMins}:${formattedSecs}`
+
+
+    })
+
+    let duration = document.querySelector(".duration")
+    audio.addEventListener('timeupdate', () => {
+        let min = Math.floor(audio.duration / 60)
+        let sec = Math.floor(audio.duration % 60)
+
+        const formattedMins = min.toString().padStart(2, 0);
+        const formattedSecs = sec.toString().padStart(2, 0);
+        duration.innerHTML = `${formattedMins}:${formattedSecs}`
+    })
 }

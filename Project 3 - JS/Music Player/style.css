@@ -54,7 +54,7 @@ main {
 }
 
 .sections {
-    border: 2px solid red;
+    border: 2px solid white;
     border-radius: 20px;
     padding: 20px;
     margin: 5px;
@@ -124,16 +124,15 @@ svg {
 
 
 .seekbar {
+    display: flex;
     width: 80%;
     height: 5px;
     background-color: white;
     border-radius: 20px;
     cursor: pointer;
-    position: relative;
 }
 
 .tracker {
-    /* width: 10px; */
     height: 5px;
     border-radius: 20px;
     background-color: rgb(145, 140, 140);
@@ -141,4 +140,25 @@ svg {
     bottom: 3px;
     width: 0%;
     transition: width 0.2s ease-out;
+}
+
+.durationBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.currentTime {
+    min-width: 80px;
+    text-align: center;
+
+}
+
+.duration {
+    min-width: 80px;
+    text-align: center;
+
+
 }
