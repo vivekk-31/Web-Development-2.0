@@ -1,11 +1,17 @@
 console.log('Let us begin.');
 
 let audio = new Audio();
-let songs = [{ name: "Tum se Hi", file: "songs/Tum_Se_Hi_(Jab_We_Met)_320_Kbps.mp3" },
-{ name: "Tune Jo Na Kaha", file: "songs/Tune Jo Na Kaha - Mohit Chauhan.mp3" },
-{ name: "Faasle", file: "songs/Faasle.mp3" },
-{ name: "Hain Junoon", file: "songs/Hai Junoon.mp3" }
+let songs = [{ name: "Tum se Hi", file: "songs/Tum_Se_Hi_(Jab_We_Met)_320_Kbps.mp3", coverImage: "CoverImages/TumSeHi Cover.jpg" },
+{ name: "Tune Jo Na Kaha", file: "songs/Tune Jo Na Kaha - Mohit Chauhan.mp3", coverImage: "CoverImages/TuneJoNaKaha Cover.jpg" },
+{ name: "Faasle", file: "songs/Faasle.mp3", coverImage: "CoverImages/Faasle Cover.jpg" },
+{ name: "Hain Junoon", file: "songs/Hai Junoon.mp3", coverImage: "CoverImages/HaiJunoon Cover.jpg" },
+{ name: "Hamein Tumse Hua Hain Pyaar", file: "songs/Hamein Tumse Hua Pyar Ab Tumhare Hawale Watan Sathiyo 320 Kbps.mp3", coverImage: "CoverImages/HameinTumseHuaHainPyaar Cover.jpg" },
+{ name: "O Meri Jaan", file: "songs/O Meri Jaan Life In A Metro 320 Kbps.mp3", coverImage: "CoverImages/OMeriJaan Cover.jpg" },
+{ name: "Yahi Hota Pyaar", file: "songs/Yahi Hota Pyaar Namastey London 320 Kbps.mp3", coverImage: "CoverImages/YahiHotaPyaar Cover.jpg" },
+{ name: "Ye Ishq Hain", file: "songs/Ye Ishq Hai Jab We Met 320 Kbps.mp3", coverImage: "CoverImages/YeIshqHain Cover.jpg" },
+{ name: "Khuda Bhi", file: "songs/Khuda Bhi Ek Paheli Leela 320 Kbps.mp3", coverImage: "CoverImages/KhudaBhi Cover.jpg" },
 ]
+
 let currentSongIndex;
 let pause = `<svg class="pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M176 96C149.5 96 128 117.5 128 144L128 496C128 522.5 149.5 544 176 544L240 544C266.5 544 288 522.5 288 496L288 144C288 117.5 266.5 96 240 96L176 96zM400 96C373.5 96 352 117.5 352 144L352 496C352 522.5 373.5 544 400 544L464 544C490.5 544 512 522.5 512 496L512 144C512 117.5 490.5 96 464 96L400 96z"/></svg>`
 
@@ -41,7 +47,7 @@ songs.forEach((currentItem, index) => {
     let coverImage = document.createElement("div")
     coverImage.className = "coverImage"
     let img = document.createElement("img")
-    img.src = "songs/cover.jpg"
+    img.src = currentItem.coverImage;
     img.alt = "coverImage"
     coverImage.appendChild(img)
     let songTitle = document.createElement("div")
