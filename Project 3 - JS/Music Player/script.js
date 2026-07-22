@@ -135,7 +135,6 @@ let playback = audio.addEventListener("timeupdate", () => {
 })
 
 
-
 function playSong() {
     audio.play()
     timeDisplay()
@@ -194,4 +193,8 @@ function timeDisplay() {
         const formattedSecs = sec.toString().padStart(2, 0);
         duration.innerHTML = `${formattedMins}:${formattedSecs}`
     })
+}
+
+function renderNowPlaying(){
+    
 }
