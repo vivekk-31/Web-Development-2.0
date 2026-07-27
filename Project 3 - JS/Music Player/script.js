@@ -82,6 +82,8 @@ songs.forEach((currentItem, index) => {
 function loadSong(index) {
     audio.src = songs[index].file;
     audio.load()
+    renderNowPlaying()
+    renderQueue()
 }
 
 let playpause = document.querySelector(".playpause");
@@ -127,7 +129,26 @@ seekbar.addEventListener("click", (e) => {
 
 let playback = audio.addEventListener("timeupdate", () => {
     tracker.style.width = `${(audio.currentTime / audio.duration) * 100}%`
-    console.log((audio.currentTime / audio.duration) * 100)
+    // console.log((audio.currentTime / audio.duration) * 100)
+
+    let currentTime = document.querySelector(".currentTime")
+    // console.log("Listener fired")
+    // console.log("Current Time is: " + `${(audio.currentTime / audio.duration) * 100}`)
+    let min = Math.floor(audio.currentTime / 60)
+    let sec = Math.floor(audio.currentTime % 60)
+
+
+    var formattedMins = min.toString().padStart(2, 0);
+    var formattedSecs = sec.toString().padStart(2, 0);
+    currentTime.innerHTML = `${formattedMins}:${formattedSecs}`
+
+    let duration = document.querySelector(".duration")
+     min = Math.floor(audio.duration / 60)
+     sec = Math.floor(audio.duration % 60)
+
+    var formattedMins = min.toString().padStart(2, 0);
+    var formattedSecs = sec.toString().padStart(2, 0);
+    duration.innerHTML = `${formattedMins}:${formattedSecs}`
 
     audio.addEventListener("ended", () => {
         nextSong();
@@ -137,7 +158,6 @@ let playback = audio.addEventListener("timeupdate", () => {
 
 function playSong() {
     audio.play()
-    timeDisplay()
 }
 
 function pauseSong() {
@@ -170,31 +190,33 @@ function nextSong() {
     }
 }
 
-function timeDisplay() {
-    let currentTime = document.querySelector(".currentTime")
-    audio.addEventListener('timeupdate', () => {
-        console.log("Current Time is: " + `${(audio.currentTime / audio.duration) * 100}`)
-        let min = Math.floor(audio.currentTime / 60)
-        let sec = Math.floor(audio.currentTime % 60)
+function renderNowPlaying() {
+    var currentSong = document.querySelector('.currentSong')
+    currentSong.replaceChildren(); // Empties the element completely
 
-        const formattedMins = min.toString().padStart(2, 0);
-        const formattedSecs = sec.toString().padStart(2, 0);
-        currentTime.innerHTML = `${formattedMins}:${formattedSecs}`
+    const song = songs[currentSongIndex]
+    let card = document.createElement('div')
+    card.className = "card"
+    let coverImage = document.createElement('div')
+    coverImage.className = "coverImage"
+    let img = document.createElement('img')
+    img.style.height = "250px"
+    img.style.width = "250px"
+    img.src = song.coverImage;
+    img.alt = "Cover Image"
+    coverImage.appendChild(img)
+    let songTitle = document.createElement('div')
+    songTitle.className = "songTitle"
+    let title = document.createElement('p')
+    title.innerText = song.name;
+    songTitle.appendChild(title)
+    card.appendChild(coverImage)
+    card.appendChild(songTitle)
 
+    currentSong.appendChild(card)
 
-    })
-
-    let duration = document.querySelector(".duration")
-    audio.addEventListener('timeupdate', () => {
-        let min = Math.floor(audio.duration / 60)
-        let sec = Math.floor(audio.duration % 60)
-
-        const formattedMins = min.toString().padStart(2, 0);
-        const formattedSecs = sec.toString().padStart(2, 0);
-        duration.innerHTML = `${formattedMins}:${formattedSecs}`
-    })
 }
 
-function renderNowPlaying(){
-    
+function renderQueue(){
+    console.log(currentSongIndex)
 }

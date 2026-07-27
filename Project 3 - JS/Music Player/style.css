@@ -23,8 +23,8 @@ ul li {
     list-style: none;
 }
 
-ul .logo{
-    font-size:x-large;
+ul .logo {
+    font-size: x-large;
     font-weight: 500;
     margin: 0;
     padding: 10px;
@@ -68,6 +68,7 @@ main {
     padding: 20px;
     margin: 5px;
     height: 75vh;
+    overflow-y: auto;
 }
 
 .playlist {
@@ -81,7 +82,7 @@ main {
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     overflow: scroll;
-    scrollbar-width: 300px;
+    scrollbar-width: none;
     scrollbar-color: #616161 rgb(17, 17, 17);
 
 }
@@ -144,7 +145,7 @@ svg {
 .tracker {
     height: 5px;
     border-radius: 20px;
-    background-color: rgb(145, 140, 140);
+    background-color: rgb(102, 102, 102);
     /* position: relative; */
     bottom: 3px;
     width: 0%;
@@ -168,6 +169,21 @@ svg {
 .duration {
     min-width: 80px;
     text-align: center;
+}
 
+/* .nowPlaying {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+} */
 
+.queue {
+    width: 100%;
+    border: 2px solid white;
+    padding: 0;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
 }
